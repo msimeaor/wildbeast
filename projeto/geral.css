@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --corFundoDarkTheme: #262829;
+  --conteudoDarkTheme: #131516;
+  --corFonte: #646464;
+  --degrade1: #8A47EE;
+  --fundoListaMenu: #8744ED;
+  --degrade2: #AD79FA;
+  --corTitulo: #B07DFB;
+  --corMiniTitulo: #B58BFC;
+  --corFundo: #F2F3F6;
+}
+
+::-webkit-scrollbar {
+  background: var(--corFundo);
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(212, 212, 212);
+  border-radius: 10px;
+  border: 4px solid var(--corFundo);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--corFonte);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.estrutura {
+  display: grid;
+  grid-template-areas: 
+    "top top top"
+    "sidenav conteudo anuncios"
+    "rodape rodape rodape"
+  ;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-auto-flow: row;
+}
+
+.top {
+  grid-area: top;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, var(--degrade1), var(--degrade2));
+}
+
+.logo {
+  margin-left: 45px;
+}
+
+.lista-menu {
+  display: flex;
+  padding: 30px;
+}
+.lista-menu li {
+  display: flex;
+  align-items: center;
+
+  margin-left: 15px;
+  margin-right: 15px;
+  background: var(--fundoListaMenu);
+  padding: 12px;
+  border-radius: 10px;
+}
+.lista-menu a {
+  display: flex;
+  align-items: center;
+
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.sidenav {
+  grid-area: sidenav;
+
+  background: var(--corFundo);
+  padding: 30px;
+}
+.lista-navegacao {
+  text-align: center;
+}
+.lista-navegacao li {
+  margin-bottom: 30px;
+}
+.lista-navegacao a {
+  display: block;
+  margin: auto;
+  
+  padding: 20px;
+  max-width: 9rem;
+  min-width: 6rem;
+  background: #FFF;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.144);
+}
+.lista-navegacao a:hover {
+  background: #B07DFB;
+  transition: .5s;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.anuncios {
+  grid-area: anuncios;
+
+  background: var(--corFundo);
+  padding: 30px;
+}
+.anuncio-container {
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.anuncio-container img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+.rodape {
+  grid-area: rodape;
+}
