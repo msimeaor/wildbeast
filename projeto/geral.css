@@ -56,7 +56,6 @@ a {
 }
 
 /* TITULO */
-
 .top {
   grid-area: top;
 
@@ -64,7 +63,6 @@ a {
   grid-template-columns: repeat(2, auto);
   grid-auto-flow: row;
   justify-content: space-between;
-  align-items: center;
   background-image: linear-gradient(to right, var(--degrade1), var(--degrade2));
   padding: 20px;
 }
@@ -131,22 +129,24 @@ a {
   grid-area: conteudo;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
   max-width: 900px;
   margin: auto;
   padding: 30px;
 }
 .conteudo img {
   width: 100%;
+  height: 100%;
+  align-self: end;
+  border-radius: 20px;
 }
 .titulo h1 {
   color: var(--corTitulo);
   font-size: 3.5rem;
   line-height: 3rem;
+  margin-bottom: 10px;
 }
 .titulo span {
-  display: block;
-  margin-top: 10px;
   color: var(--corTitulo);
   font-size: 0.8rem;
 }
@@ -169,7 +169,7 @@ a {
 .numero {
   height: 60%;
   font-size: 1.8rem;
-  background: var(--fundoListaMenu);
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
   color: #d8d8d8;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -179,12 +179,82 @@ a {
   font-size: 1rem;
 }
 
+.p-cortado {
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.p-menor {
+  width: 60%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: var(--corTitulo);
+  font-weight: bold;
+}
+.p-normal {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.p-italico {
+  width: 60%;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.8rem;
+  color: #FFF;
+}
+
+.paragrafos-alinhados p {
+  line-height: 1.9rem;
+}
+
+.paragrafos-alinhados p + p {
+  margin-top: 20px;
+}
+
+.citacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  border-radius: 20px;
+}
+
+.lista-caracteristicas {
+  padding: 30px;
+  background: linear-gradient(360rad, var(--degrade1) 40%, var(--degrade2)) 60%;
+  border-radius: 20px;
+  align-self: self-start;
+}
+.lista-caracteristicas li {
+  font-size: 1.15rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #FFF;
+  padding: 20px;
+}
+.lista-caracteristicas li + li {
+  border-top: 2px solid #ffffff44;
+}
+
+
+[data-cor="verde"] {
+  color: rgb(0, 255, 0);
+}
+[data-cor="amarelo"] {
+  color: yellow;
+}
+[data-cor="vermelho"] {
+  color: rgb(212, 5, 5);
+}
+
 .duas-colunas {
   grid-column: 1 / -1;
 }
 .primeira-imagem {
   grid-row: span 2;
 }
+
 
 /* ANUNCIOS */
 
